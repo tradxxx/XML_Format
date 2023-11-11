@@ -1,6 +1,7 @@
 ﻿using System.Xml.Xsl;
 using System.Xml;
 using XML_Format.Service;
+using Microsoft.VisualBasic;
 
 namespace XML_Format
 {
@@ -8,7 +9,7 @@ namespace XML_Format
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Выберите пункт:\n1)XPath-запросы\n2) Валидация XSD");
+            Console.WriteLine("Выберите пункт:\n1) XPath-запросы\n2) Валидация XSD\n3) XSLT-преобразование");
             Console.Write("Ваш выбор: ");
             int value = int.Parse(Console.ReadLine());
             Console.Clear();
@@ -20,6 +21,9 @@ namespace XML_Format
                     break;
                 case 2:
                     Validation();
+                    break;
+                case 3:
+                    ConversionInTxt();
                     break;
             }
             static void XPath_Request()
@@ -64,6 +68,11 @@ namespace XML_Format
             {
                 ValidationXSD validationXSD = new ValidationXSD();
                 validationXSD.Start();
+            }
+            static void ConversionInTxt()
+            {
+                XSLT_Сonversion xSLT = new XSLT_Сonversion();
+                xSLT.Start();
             }
         }
     }
