@@ -8,9 +8,7 @@ namespace XML_Format
     {
         static void Main(string[] args)
         {
-            StarterXML starterXML = new StarterXML();
-            
-            Console.WriteLine("Выберите пункт:\n1) Расписание текущей недели\n2) Получить все занятия на данной неделе\n3) Получить все аудитории, в которых проходят занятия.\n4) Получить все практические занятия на неделе.\n5) Получить все лекции, проводимые в указанной аудитории.\n6) Получить список всех преподавателей, проводящих практики в указанной аудитории.\n7) Получить последнее занятие для каждого дня недели.\n8) Получить общее количество занятий за всю неделю.");
+            Console.WriteLine("Выберите пункт:\n1)XPath-запросы\n2) Валидация XSD");
             Console.Write("Ваш выбор: ");
             int value = int.Parse(Console.ReadLine());
             Console.Clear();
@@ -18,31 +16,55 @@ namespace XML_Format
             switch (value)
             {
                 case 1:
-                    starterXML.ScheduleForTheCurrentWeek();
-                    break;  
+                    XPath_Request();
+                    break;
                 case 2:
-                    starterXML.AllLessons();
+                    Validation();
                     break;
-                case 3:
-                    starterXML.AllRooms();
-                    break;
-                case 4:
-                    starterXML.AllPractice();
-                    break;
-                case 5:
-                    starterXML.AllLectureInRoom();
-                    break;
-                case 6:
-                    starterXML.AllTeachersPracticeInRoom();
-                    break;
-                case 7:
-                    starterXML.LastLesson();
-                    break;
-                case 8:
-                    starterXML.TotalCountLessons();
-                    break;
+            }
+            static void XPath_Request()
+            {
+                StarterXML starterXML = new StarterXML();
 
-            }         
-        }      
+                Console.WriteLine("Выберите пункт:\n1) Расписание текущей недели\n2) Получить все занятия на данной неделе\n3) Получить все аудитории, в которых проходят занятия.\n4) Получить все практические занятия на неделе.\n5) Получить все лекции, проводимые в указанной аудитории.\n6) Получить список всех преподавателей, проводящих практики в указанной аудитории.\n7) Получить последнее занятие для каждого дня недели.\n8) Получить общее количество занятий за всю неделю.");
+                Console.Write("Ваш выбор: ");
+                int value = int.Parse(Console.ReadLine());
+                Console.Clear();
+
+                switch (value)
+                {
+                    case 1:
+                        starterXML.ScheduleForTheCurrentWeek();
+                        break;
+                    case 2:
+                        starterXML.AllLessons();
+                        break;
+                    case 3:
+                        starterXML.AllRooms();
+                        break;
+                    case 4:
+                        starterXML.AllPractice();
+                        break;
+                    case 5:
+                        starterXML.AllLectureInRoom();
+                        break;
+                    case 6:
+                        starterXML.AllTeachersPracticeInRoom();
+                        break;
+                    case 7:
+                        starterXML.LastLesson();
+                        break;
+                    case 8:
+                        starterXML.TotalCountLessons();
+                        break;
+
+                }
+            }
+            static void Validation()
+            {
+                ValidationXSD validationXSD = new ValidationXSD();
+                validationXSD.Start();
+            }
+        }
     }
 }
