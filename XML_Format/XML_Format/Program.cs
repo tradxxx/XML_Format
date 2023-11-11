@@ -1,5 +1,6 @@
 ﻿using System.Xml.Xsl;
 using System.Xml;
+using XML_Format.Service;
 
 namespace XML_Format
 {
@@ -7,56 +8,41 @@ namespace XML_Format
     {
         static void Main(string[] args)
         {
-            // Загружаем XML-документ
-            XmlDocument doc = new XmlDocument();
-            doc.Load("schedule.xml");
+            StarterXML starterXML = new StarterXML();
+            
+            Console.WriteLine("Выберите пункт:\n1) Расписание текущей недели\n2) Получить все занятия на данной неделе\n3) Получить все аудитории, в которых проходят занятия.\n4) Получить все практические занятия на неделе.\n5) Получить все лекции, проводимые в указанной аудитории.\n6) Получить список всех преподавателей, проводящих практики в указанной аудитории.\n7) Получить последнее занятие для каждого дня недели.\n8) Получить общее количество занятий за всю неделю.");
+            Console.Write("Ваш выбор: ");
+            int value = int.Parse(Console.ReadLine());
+            Console.Clear();
 
-
-            // XPath запросы
-            Console.WriteLine("Все занятия:");
-            PrintNodeList(doc.SelectNodes("//lesson"));
-
-            Console.WriteLine("Все аудитории:");
-            PrintNodeList(doc.SelectNodes("//lesson/@room"));
-
-            Console.WriteLine("Все практики:");
-            PrintNodeList(doc.SelectNodes("//lesson[@type='practice']"));
-
-            Console.WriteLine("Лекции в аудитории 104:");
-            PrintNodeList(doc.SelectNodes("//lesson[room='104']"));
-
-            Console.WriteLine("Преподаватели практик в аудитории 105:");
-            PrintNodeList(doc.SelectNodes("//lesson[@room='105' and @type='practice']/@teacher"));
-
-            Console.WriteLine("Последние занятия по дням:");
-            PrintNodeList(doc.SelectNodes("//day/lesson[last()]"));
-
-            int totalLessons = doc.SelectNodes("//lesson").Count;
-            Console.WriteLine("Общее количество занятий: " + totalLessons);
-
-            // XSLT преобразование
-            XslCompiledTransform xslt = new XslCompiledTransform();
-            xslt.Load("schedule-to-text.xslt");
-            xslt.Transform("schedule.xml", "schedule.txt");
-
-            xslt.Load("schedule-to-text.xslt");
-            xslt.Transform("schedule.xml", "schedule.html");
-        }
-
-        static void PrintNodeList(XmlNodeList nodes)
-        {
-            foreach (XmlNode node in nodes)
+            switch (value)
             {
-                if (node.Name == "lesson")
-                {
-                    Console.WriteLine($"{node.Attributes["subject"].Value} {node.Attributes["room"].Value} {node.Attributes["start"].Value} - {node.Attributes["end"].Value}");
-                }
-                else if (node.Name == "day")
-                {
-                    Console.WriteLine(node.Attributes["name"].Value);
-                }
-            }
-            Console.WriteLine(String.Format("--", 10));
-        }
+                case 1:
+                    starterXML.ScheduleForTheCurrentWeek();
+                    break;  
+                case 2:
+                    starterXML.AllLessons();
+                    break;
+                case 3:
+                    starterXML.AllRooms();
+                    break;
+                case 4:
+                    starterXML.AllPractice();
+                    break;
+                case 5:
+                    starterXML.AllLectureInRoom();
+                    break;
+                case 6:
+                    starterXML.AllTeachersPracticeInRoom();
+                    break;
+                case 7:
+                    starterXML.LastLesson();
+                    break;
+                case 8:
+                    starterXML.TotalCountLessons();
+                    break;
+
+            }         
+        }      
     }
 }
