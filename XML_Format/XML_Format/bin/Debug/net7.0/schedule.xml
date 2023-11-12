@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="schedule_schema.xsd">
+  <day name="Monday">
+    <lesson subject="Math" room="101" teacher="Mr. Smith" start="9:00" end="10:30" type="lecture"/>
+    <lesson subject="English" room="102" teacher="Ms. Johnson" start="11:00" end="12:30" type="practice"/>
+  </day>
+  
+  <day name="Tuesday">
+    <lesson subject="Physics" room="103" teacher="Mr. Kepler" start="10:00" end="11:30" type="lecture"/>
+    <lesson subject="Chemistry" room="104" teacher="Ms. Curie" start="12:00" end="13:30" type="practice"/>
+    <lesson subject="Biology" room="105" teacher="Mr. Darwin" start="14:00" end="15:30" type="lecture"/>
+  </day>
+  
+  <day name="Wednesday">
+    <lesson subject="Math" room="101" teacher="Mr. Smith" start="9:00" end="10:30" type="practice"/>
+    <lesson subject="English" room="102" teacher="Ms. Johnson" start="11:00" end="12:30" type="lecture"/>
+    <lesson subject="Geometry" room="106" teacher="Mr. Euclid" start="14:00" end="15:30" type="lecture"/>
+  </day>
+  
+  <day name="Thursday">
+    <lesson subject="Physics" room="103" teacher="Mr. Kepler" start="10:00" end="11:30" type="practice"/>
+    <lesson subject="Chemistry" room="104" teacher="Ms. Curie" start="12:00" end="13:30" type="lecture"/>
+  </day>
+  
+  <day name="Friday">
+    <lesson subject="Biology" room="105" teacher="Mr. Darwin" start="10:00" end="11:30" type="practice"/>
+    <lesson subject="Geometry" room="106" teacher="Mr. Euclid" start="12:00" end="13:30" type="practice"/>
+  </day>
+</schedule>

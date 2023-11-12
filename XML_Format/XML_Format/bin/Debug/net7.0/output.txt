@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>Monday
+
+Math, Mr. Smith, 9:00 - 10:30
+English, Ms. Johnson, 11:00 - 12:30
+
+
+Tuesday
+
+Physics, Mr. Kepler, 10:00 - 11:30
+Chemistry, Ms. Curie, 12:00 - 13:30
+Biology, Mr. Darwin, 14:00 - 15:30
+
+
+Wednesday
+
+Math, Mr. Smith, 9:00 - 10:30
+English, Ms. Johnson, 11:00 - 12:30
+Geometry, Mr. Euclid, 14:00 - 15:30
+
+
+Thursday
+
+Physics, Mr. Kepler, 10:00 - 11:30
+Chemistry, Ms. Curie, 12:00 - 13:30
+
+
+Friday
+
+Biology, Mr. Darwin, 10:00 - 11:30
+Geometry, Mr. Euclid, 12:00 - 13:30
+
+

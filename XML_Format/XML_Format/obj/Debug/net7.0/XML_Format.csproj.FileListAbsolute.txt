@@ -1,0 +1,15 @@
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\bin\Debug\net7.0\XML_Format.exe
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\bin\Debug\net7.0\XML_Format.deps.json
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\bin\Debug\net7.0\XML_Format.runtimeconfig.json
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\bin\Debug\net7.0\XML_Format.dll
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\bin\Debug\net7.0\XML_Format.pdb
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\XML_Format.csproj.AssemblyReference.cache
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\XML_Format.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\XML_Format.AssemblyInfoInputs.cache
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\XML_Format.AssemblyInfo.cs
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\XML_Format.csproj.CoreCompileInputs.cache
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\XML_Format.dll
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\refint\XML_Format.dll
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\XML_Format.pdb
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\XML_Format.genruntimeconfig.cache
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\ref\XML_Format.dll
