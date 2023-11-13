@@ -31,13 +31,13 @@ static void WorkWithXml()
             XPath_Request();
             break;
         case 2:
-            // код для валидации XSD
+            new ValidationXSD().Run();
             break;
         case 3:
-            // код для XSLT в TXT
+            new XSLT_Сonversion().StartTxt();
             break;
         case 4:
-            // код для XSLT в HTML
+            new XSLT_Сonversion().StartHtml();
             break;
     }
 }
