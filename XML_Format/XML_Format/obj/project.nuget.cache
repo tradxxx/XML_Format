@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EJWVrLqwjZi6rsVv72fwZmdra4CH2Zr+B7p3ODF8/j+bZVfgJlz34d8dFvPIs5V0v8jQiBp+kcDvOPG59SGOvQ==",
+  "dgSpecHash": "zrWWM8uqHvWBQNPBHPb3hRhfetnysBbCLx12bH9Iiv668BmsWYEsgvEcuFPT0drlEAJ7d0e7Z7XBKBNYIa+0Xw==",
   "success": true,
   "projectFilePath": "C:\\Users\\tradxxx\\Desktop\\Сертификат Microsoft\\Xml лаба\\XML_Format\\XML_Format\\XML_Format.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\tradxxx\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -13,3 +13,5 @@ C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\
 C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\XML_Format.pdb
 C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\XML_Format.genruntimeconfig.cache
 C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\ref\XML_Format.dll
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\XML_Format\XML_Format\obj\Debug\net7.0\XML_Format.csproj.CopyComplete
