@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="timesheet_schema.xsd">
+
+  <day name="Понедельник">
+    <lesson subject="Математика" room="11" teacher="Иванов И.И." start="9:00" end="10:30" type="лекция"/>
+    <lesson subject="Русский язык" room="12" teacher="Петрова М.С." start="11:00" end="12:30" type="практика"/>
+    <lesson subject="Химия" room="14" teacher="Васильева О.П." start="13:00" end="14:30" type="лекция"/>
+  </day>
+
+  <day name="Вторник">
+    <lesson subject="Физика" room="13" teacher="Сидоров А.В." start="10:00" end="11:30" type="лекция"/>
+    <lesson subject="Химия" room="14" teacher="Васильева О.П." start="12:00" end="13:30" type="практика"/>
+    <lesson subject="Биология" room="15" teacher="Соколова Л.М." start="14:00" end="15:30" type="лекция"/>
+  </day>
+
+  <day name="Среда">
+    <lesson subject="Математика" room="11" teacher="Иванов И.И." start="9:00" end="10:30" type="практика"/>
+    <lesson subject="Русский язык" room="12" teacher="Петрова М.С." start="11:00" end="12:30" type="лекция"/>
+    <lesson subject="Геометрия" room="16" teacher="Соколов П.А." start="14:00" end="15:30" type="лекция"/>
+  </day>
+
+  <day name="Четверг">
+    <lesson subject="Физика" room="13" teacher="Сидоров А.В." start="10:00" end="11:30" type="практика"/>
+    <lesson subject="Химия" room="14" teacher="Васильева О.П." start="12:00" end="13:30" type="лекция"/>
+    <lesson subject="Геометрия" room="16" teacher="Соколов П.А." start="14:00" end="15:30" type="лекция"/>
+  </day>
+
+  <day name="Пятница">
+    <lesson subject="Биология" room="15" teacher="Соколова Л.М." start="10:00" end="11:30" type="практика"/> 
+    <lesson subject="Геометрия" room="16" teacher="Соколов П.А." start="12:00" end="13:30" type="практика"/>
+  </day>
+
+</schedule>

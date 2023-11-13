@@ -1,0 +1,17 @@
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\bin\Debug\net6.0\Project_xml.exe
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\bin\Debug\net6.0\Project_xml.deps.json
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\bin\Debug\net6.0\Project_xml.runtimeconfig.json
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\bin\Debug\net6.0\Project_xml.dll
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\bin\Debug\net6.0\Project_xml.pdb
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\obj\Debug\net6.0\Project_xml.csproj.AssemblyReference.cache
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\obj\Debug\net6.0\Project_xml.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\obj\Debug\net6.0\Project_xml.AssemblyInfoInputs.cache
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\obj\Debug\net6.0\Project_xml.AssemblyInfo.cs
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\obj\Debug\net6.0\Project_xml.csproj.CoreCompileInputs.cache
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\obj\Debug\net6.0\Project_xml.dll
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\obj\Debug\net6.0\refint\Project_xml.dll
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\obj\Debug\net6.0\Project_xml.pdb
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\obj\Debug\net6.0\Project_xml.genruntimeconfig.cache
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\obj\Debug\net6.0\ref\Project_xml.dll
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\tradxxx\Desktop\Сертификат Microsoft\Xml лаба\Project_xml\Project_xml\obj\Debug\net6.0\Project_xml.csproj.CopyComplete
