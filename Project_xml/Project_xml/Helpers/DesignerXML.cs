@@ -7,21 +7,24 @@ using System.Xml;
 
 namespace XML_Format.Service
 {
-    public class StarterXML
+    public class DesignerXML
     {
-        public void ScheduleForTheCurrentWeek()
+        XmlDocument doc;
+        public DesignerXML() 
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("schedule.xml");
+            doc = new XmlDocument();
+            doc.Load("timesheet.xml");
+        }
+        public void ScheduleForTheCurrentWeek()
+        {        
 
             Console.WriteLine("Расписание на текущую неделю:");
 
             XmlNodeList days = doc.SelectNodes("/schedule/day");
             foreach (XmlNode day in days)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(day.Attributes["name"].Value);
-                Console.ResetColor();
+
                 XmlNodeList lessons = day.SelectNodes("lesson");
 
                 foreach (XmlNode lesson in lessons)
@@ -35,7 +38,7 @@ namespace XML_Format.Service
 
                     Console.WriteLine();
                 }
-                Console.WriteLine("----",10);
+                Console.WriteLine(new string('*',10));
                 Console.WriteLine();
             }
             Console.ReadLine();
@@ -43,11 +46,7 @@ namespace XML_Format.Service
 
 
         public void AllLessons()
-        {          
-            XmlDocument doc = new XmlDocument();
-            doc.Load("schedule.xml");
-
-   
+        {                       
             XmlNodeList lessons = doc.SelectNodes("//lesson");
 
             Console.WriteLine("Все занятия на этой неделе:");
@@ -69,9 +68,7 @@ namespace XML_Format.Service
         }
 
         public void AllRooms()
-        {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("schedule.xml");
+        {        
 
             XmlNodeList rooms = doc.SelectNodes("//lesson/@room");
           
@@ -92,10 +89,8 @@ namespace XML_Format.Service
 
         public void AllPractice()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("schedule.xml");
 
-            XmlNodeList practices = doc.SelectNodes("//lesson[@type='practice']");
+            XmlNodeList practices = doc.SelectNodes("//lesson[@type='практика']");
 
             Console.WriteLine("Практики на этой неделе:");
 
@@ -107,13 +102,11 @@ namespace XML_Format.Service
 
         public void AllLectureInRoom()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("schedule.xml");
 
             Console.Write("Номер аудитории: ");
             string room = Console.ReadLine();
 
-            XmlNodeList lectures = doc.SelectNodes("//lesson[@room='" + room + "' and @type='lecture']");
+            XmlNodeList lectures = doc.SelectNodes("//lesson[@room='" + room + "' and @type='лекция']");
 
             Console.WriteLine("Лекции в аудитории " + room+ ":");
 
@@ -133,13 +126,11 @@ namespace XML_Format.Service
 
         public void AllTeachersPracticeInRoom()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("schedule.xml");
 
             Console.Write("Номер аудитории: ");
             string room = Console.ReadLine();
 
-            XmlNodeList lessons = doc.SelectNodes($"//lesson[@room='{room}' and @type='practice']");
+            XmlNodeList lessons = doc.SelectNodes($"//lesson[@room='{room}' and @type='практика']");
 
             Console.WriteLine($"Преподаватели, проводящие практики в аудитории {room}:");
 
@@ -159,8 +150,6 @@ namespace XML_Format.Service
 
         public void LastLesson()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("schedule.xml");
 
             XmlNodeList lastLessons = doc.SelectNodes("//day/lesson[last()]");
 
@@ -176,7 +165,7 @@ namespace XML_Format.Service
                     string start = lesson.Attributes["start"].Value;
                     string end = lesson.Attributes["end"].Value;
 
-                    Console.WriteLine($"{day}: {subject} ({teacher}) - {start} to {end}");
+                    Console.WriteLine($"{day}: {subject} ({teacher}) - с {start} до {end}");
                 }
             }
             else
@@ -186,9 +175,7 @@ namespace XML_Format.Service
         }
 
         public void TotalCountLessons()
-        {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("schedule.xml");
+        {            
 
             int totalLessons = GetTotalLessons(doc);
 
