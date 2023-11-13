@@ -44,7 +44,42 @@ static void WorkWithXml()
 
 static void WorkWithJson()
 {
-    // аналогично для JSON
+    DesignerJSON designerJSON = new DesignerJSON();
+
+    PrintMenu();
+
+    int choice = GetUserChoice();
+
+    switch (choice)
+    {
+        case 1:
+            designerJSON.ScheduleForTheCurrentWeek();
+            break;
+        case 2:
+            designerJSON.AllLessons();
+            break;
+        case 3:
+            designerJSON.AllRooms();
+            break;
+        case 4:
+            designerJSON.AllPractice();
+            break;
+        case 5:
+            designerJSON.AllLectureInRoom();
+            break;
+        case 6: 
+            designerJSON.AllTeachersPracticeInRoom();
+            break;
+        case 7:
+            designerJSON.LastLesson();
+            break;
+        case 8:
+            designerJSON.TotalCountLessons();
+            break;
+
+    }
+
+    Console.WriteLine();
 }
 
 static int GetUserChoice()
@@ -99,20 +134,22 @@ static void XPath_Request()
 
     Console.WriteLine();
 
-
-    static void PrintMenu()
-    {
-        Console.WriteLine("XML-документ");
-        Console.WriteLine("Выберите пункт:");
-        Console.WriteLine("1) Расписание текущей недели");
-        Console.WriteLine("2) Получить все занятия на данной неделе");
-        Console.WriteLine("3) Получить все аудитории, в которых проходят занятия");
-        Console.WriteLine("4) Получить все практические занятия на неделе");
-        Console.WriteLine("5) Получить все лекции, проводимые в указанной аудитории");
-        Console.WriteLine("6) Получить список всех преподавателей, проводящих практики в указанной аудитории");
-        Console.WriteLine("7) Получить последнее занятие для каждого дня недели");
-        Console.WriteLine("8) Получить общее количество занятий");
-        
-    }
+    
 }
 
+
+
+static void PrintMenu()
+{
+    Console.WriteLine("XML-документ");
+    Console.WriteLine("Выберите пункт:");
+    Console.WriteLine("1) Расписание текущей недели");
+    Console.WriteLine("2) Получить все занятия на данной неделе");
+    Console.WriteLine("3) Получить все аудитории, в которых проходят занятия");
+    Console.WriteLine("4) Получить все практические занятия на неделе");
+    Console.WriteLine("5) Получить все лекции, проводимые в указанной аудитории");
+    Console.WriteLine("6) Получить список всех преподавателей, проводящих практики в указанной аудитории");
+    Console.WriteLine("7) Получить последнее занятие для каждого дня недели");
+    Console.WriteLine("8) Получить общее количество занятий");
+
+}
