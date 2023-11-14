@@ -9,12 +9,12 @@ namespace XML_Format.Service
 {
     public class DesignerJSON
     {
-        JObject scheduleJson;
+        JObject timesheetJson;
         public DesignerJSON() 
         {
-            scheduleJson = new JObject();
+            timesheetJson = new JObject();
             string jsonText = System.IO.File.ReadAllText("timesheet.json");
-            scheduleJson = JObject.Parse(jsonText);
+            timesheetJson = JObject.Parse(jsonText);
         }
        
         public void ScheduleForTheCurrentWeek()
@@ -22,20 +22,20 @@ namespace XML_Format.Service
 
             Console.WriteLine("Расписание на текущую неделю:");
 
-            foreach (var day in scheduleJson["schedule"]["day"])
+            foreach (var day in timesheetJson["timesheet"]["day"])
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(day["@name"]);
+                Console.WriteLine(day["name"]);
                 Console.ResetColor();
 
-                foreach (var lesson in day["lesson"])
+                foreach (var tutorial in day["tutorial"])
                 {
-                    Console.WriteLine($"Предмет: {lesson["@subject"]}");
-                    Console.WriteLine($"Аудитория: {lesson["@room"]}");
-                    Console.WriteLine($"Преподаватель: {lesson["@teacher"]}");
-                    Console.WriteLine($"Время начала: {lesson["@start"]}");
-                    Console.WriteLine($"Время конца: {lesson["@end"]}");
-                    Console.WriteLine($"Тип занятия: {lesson["@type"]}\n");
+                    Console.WriteLine($"Предмет: {tutorial["subject"]}");
+                    Console.WriteLine($"Аудитория: {tutorial["room"]}");
+                    Console.WriteLine($"Преподаватель: {tutorial["teacher"]}");
+                    Console.WriteLine($"Время начала: {tutorial["start"]}");
+                    Console.WriteLine($"Время конца: {tutorial["end"]}");
+                    Console.WriteLine($"Тип занятия: {tutorial["type"]}\n");
                 }
 
                 Console.WriteLine("----\n");
@@ -50,9 +50,9 @@ namespace XML_Format.Service
 
             int i = 1;
 
-            foreach (var lesson in scheduleJson.SelectTokens("$.schedule.day[*].lesson[*]"))
+            foreach (var tutorial in timesheetJson.SelectTokens("$.timesheet.day[*].tutorial[*]"))
             {
-                string subject = lesson["@subject"].ToString();
+                string subject = tutorial["subject"].ToString();
                 Console.WriteLine($"{i}. {subject}");
                 i++;
             }
@@ -64,7 +64,7 @@ namespace XML_Format.Service
         {
             HashSet<string> uniqueRooms = new HashSet<string>();
 
-            foreach (var room in scheduleJson.SelectTokens("$.schedule.day[*].lesson[*].@room"))
+            foreach (var room in timesheetJson.SelectTokens("$.timesheet.day[*].tutorial[*].room"))
             {
                 uniqueRooms.Add(room.ToString());
             }
@@ -81,9 +81,9 @@ namespace XML_Format.Service
         {
             Console.WriteLine("Практики на этой неделе:");
 
-            foreach (var lesson in scheduleJson.SelectTokens("$.schedule.day[*].lesson[?(@.@type=='практика')]"))
+            foreach (var tutorial in timesheetJson.SelectTokens("$.timesheet.day[*].tutorial[?(@.type=='практика')]"))
             {
-                Console.WriteLine($"- {lesson["@subject"]}");
+                Console.WriteLine($"- {tutorial["subject"]}");
             }
         }
 
@@ -94,13 +94,13 @@ namespace XML_Format.Service
 
             Console.WriteLine($"Лекции в аудитории {room}:");
 
-            var lectures = scheduleJson.SelectTokens($"$.schedule.day[*].lesson[?(@.@room == '{room}' && @.@type == 'лекция')]");
+            var lectures = timesheetJson.SelectTokens($"$.timesheet.day[*].tutorial[?(@.room == '{room}' && @.type == 'лекция')]");
 
             if (lectures.Any())
             {
                 foreach (var lecture in lectures)
                 {
-                    Console.WriteLine($"* {lecture["@subject"]}");
+                    Console.WriteLine($"* {lecture["subject"]}");
                 }
             }
             else
@@ -116,13 +116,13 @@ namespace XML_Format.Service
 
             Console.WriteLine($"Преподаватели, проводящие практики в аудитории {room}:");
 
-            var lessons = scheduleJson.SelectTokens($"$.schedule.day[*].lesson[?(@.@room == '{room}' && @.@type == 'практика')]");
+            var tutorials = timesheetJson.SelectTokens($"$.timesheet.day[*].tutorial[?(@.room == '{room}' && @.type == 'практика')]");
 
-            if (lessons.Any())
+            if (tutorials.Any())
             {
-                foreach (var lesson in lessons)
+                foreach (var tutorial in tutorials)
                 {
-                    Console.WriteLine($"- {lesson["@teacher"]}");
+                    Console.WriteLine($"- {tutorial["teacher"]}");
                 }
             }
             else
@@ -135,25 +135,25 @@ namespace XML_Format.Service
         {
             Console.WriteLine("Последнее занятие для каждого дня недели:");
 
-            foreach (JToken day in scheduleJson["schedule"]["day"])
+            foreach (JToken day in timesheetJson["timesheet"]["day"])
             {
-                JArray lessons = (JArray)day["lesson"];
+                JArray tutorials = (JArray)day["tutorial"];
 
-                var lastLesson = lessons[lessons.Count - 1];
+                var lastLesson = tutorials[tutorials.Count - 1];
 
-                Console.WriteLine(day["@name"] + ": " + lastLesson["@subject"]);
+                Console.WriteLine(day["name"] + ": " + lastLesson["subject"]);
             }
         }
 
         public void TotalCountLessons()
         {
-            int totalLessons = GetTotalLessons(scheduleJson);
+            int totalLessons = GetTotalLessons(timesheetJson);
 
             Console.WriteLine($"Общее количество занятий за неделю: {totalLessons}");
 
-            static int GetTotalLessons(JObject schedule)
+            static int GetTotalLessons(JObject timesheet)
             {
-                var allLessons = schedule.SelectTokens("$.schedule.day[*].lesson[*].@subject");
+                var allLessons = timesheet.SelectTokens("$.timesheet.day[*].tutorial[*].subject");
 
                 return allLessons.Count();
             }

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <!-- Определение элемента schedule -->
-  <xs:element name="schedule">
+  <!-- Определение элемента timesheet -->
+  <xs:element name="timesheet">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="day" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="lesson" maxOccurs="unbounded">
+              <xs:element name="tutorial" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:attribute name="subject" type="xs:string" use="required"/>
                   <xs:attribute name="room" type="xs:string" use="required"/>

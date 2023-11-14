@@ -20,21 +20,21 @@ namespace XML_Format.Service
 
             Console.WriteLine("Расписание на текущую неделю:");
 
-            XmlNodeList days = doc.SelectNodes("/schedule/day");
+            XmlNodeList days = doc.SelectNodes("/timesheet/day");
             foreach (XmlNode day in days)
             {
                 Console.WriteLine(day.Attributes["name"].Value);
 
-                XmlNodeList lessons = day.SelectNodes("lesson");
+                XmlNodeList tutorials = day.SelectNodes("tutorial");
 
-                foreach (XmlNode lesson in lessons)
+                foreach (XmlNode tutorial in tutorials)
                 {
-                    Console.WriteLine($"Предмет: {lesson.Attributes["subject"].Value}");
-                    Console.WriteLine($"Аудитория: {lesson.Attributes["room"].Value}");
-                    Console.WriteLine($"Преподаватель: {lesson.Attributes["teacher"].Value}");
-                    Console.WriteLine($"Время начала: {lesson.Attributes["start"].Value}");
-                    Console.WriteLine($"Время конца: {lesson.Attributes["end"].Value}");
-                    Console.WriteLine($"Тип занятия: {lesson.Attributes["type"].Value}");
+                    Console.WriteLine($"Предмет: {tutorial.Attributes["subject"].Value}");
+                    Console.WriteLine($"Аудитория: {tutorial.Attributes["room"].Value}");
+                    Console.WriteLine($"Преподаватель: {tutorial.Attributes["teacher"].Value}");
+                    Console.WriteLine($"Время начала: {tutorial.Attributes["start"].Value}");
+                    Console.WriteLine($"Время конца: {tutorial.Attributes["end"].Value}");
+                    Console.WriteLine($"Тип занятия: {tutorial.Attributes["type"].Value}");
 
                     Console.WriteLine();
                 }
@@ -47,16 +47,16 @@ namespace XML_Format.Service
 
         public void AllLessons()
         {                       
-            XmlNodeList lessons = doc.SelectNodes("//lesson");
+            XmlNodeList tutorials = doc.SelectNodes("//tutorial");
 
             Console.WriteLine("Все занятия на этой неделе:");
 
             int i = 1;
 
-            foreach (XmlNode lesson in lessons)
+            foreach (XmlNode tutorial in tutorials)
             {
 
-                string subject = lesson.Attributes["subject"].Value;
+                string subject = tutorial.Attributes["subject"].Value;
 
                 Console.WriteLine(i + ". " + subject);
 
@@ -70,7 +70,7 @@ namespace XML_Format.Service
         public void AllRooms()
         {        
 
-            XmlNodeList rooms = doc.SelectNodes("//lesson/@room");
+            XmlNodeList rooms = doc.SelectNodes("//tutorial/room");
           
             HashSet<string> uniqueRooms = new HashSet<string>();
 
@@ -90,13 +90,13 @@ namespace XML_Format.Service
         public void AllPractice()
         {
 
-            XmlNodeList practices = doc.SelectNodes("//lesson[@type='практика']");
+            XmlNodeList practices = doc.SelectNodes("//tutorial[type='практика']");
 
             Console.WriteLine("Практики на этой неделе:");
 
-            foreach (XmlNode lesson in practices)
+            foreach (XmlNode tutorial in practices)
             {
-                Console.WriteLine("- "+lesson.Attributes["subject"].Value);
+                Console.WriteLine("- "+tutorial.Attributes["subject"].Value);
             }
         }
 
@@ -106,15 +106,15 @@ namespace XML_Format.Service
             Console.Write("Номер аудитории: ");
             string room = Console.ReadLine();
 
-            XmlNodeList lectures = doc.SelectNodes("//lesson[@room='" + room + "' and @type='лекция']");
+            XmlNodeList lectures = doc.SelectNodes("//tutorial[room='" + room + "' and type='лекция']");
 
             Console.WriteLine("Лекции в аудитории " + room+ ":");
 
             if (lectures != null && lectures.Count > 0)
             {
-                foreach (XmlNode lesson in lectures)
+                foreach (XmlNode tutorial in lectures)
                 {
-                    Console.WriteLine("* "+lesson.Attributes["subject"].Value);
+                    Console.WriteLine("* "+tutorial.Attributes["subject"].Value);
                 }
             }
             else
@@ -130,15 +130,15 @@ namespace XML_Format.Service
             Console.Write("Номер аудитории: ");
             string room = Console.ReadLine();
 
-            XmlNodeList lessons = doc.SelectNodes($"//lesson[@room='{room}' and @type='практика']");
+            XmlNodeList tutorials = doc.SelectNodes($"//tutorial[room='{room}' and type='практика']");
 
             Console.WriteLine($"Преподаватели, проводящие практики в аудитории {room}:");
 
-            if (lessons != null && lessons.Count > 0)
+            if (tutorials != null && tutorials.Count > 0)
             {
-                foreach (XmlNode lesson in lessons)
+                foreach (XmlNode tutorial in tutorials)
                 {
-                    string teacher = lesson.Attributes["teacher"].Value;
+                    string teacher = tutorial.Attributes["teacher"].Value;
                     Console.WriteLine("- "+ teacher);
                 }
             }
@@ -151,21 +151,22 @@ namespace XML_Format.Service
         public void LastLesson()
         {
 
-            XmlNodeList lastLessons = doc.SelectNodes("//day/lesson[last()]");
+            XmlNodeList lastLessons = doc.SelectNodes("//day/tutorial[last()]");
 
             Console.WriteLine("Последнее занятие для каждого дня недели:");
 
             if (lastLessons != null && lastLessons.Count > 0)
             {
-                foreach (XmlNode lesson in lastLessons)
+                foreach (XmlNode tutorial in lastLessons)
                 {
-                    string day = lesson.ParentNode.Attributes["name"].Value;
-                    string subject = lesson.Attributes["subject"].Value;
-                    string teacher = lesson.Attributes["teacher"].Value;
-                    string start = lesson.Attributes["start"].Value;
-                    string end = lesson.Attributes["end"].Value;
+                    string day = tutorial.ParentNode.Attributes["name"].Value;
+                    string subject = tutorial.Attributes["subject"].Value;
+                    string teacher = tutorial.Attributes["teacher"].Value;
+                    string room = tutorial.Attributes["room"].Value;
+                    string start = tutorial.Attributes["start"].Value;
+                    string end = tutorial.Attributes["end"].Value;
 
-                    Console.WriteLine($"{day}: {subject} ({teacher}) - с {start} до {end}");
+                    Console.WriteLine($"{day}: {subject} ({teacher}) {room} каб. - с {start} до {end}");
                 }
             }
             else
@@ -184,7 +185,7 @@ namespace XML_Format.Service
             static int GetTotalLessons(XmlDocument doc)
             {
                 // Получаем узлы всех занятий
-                XmlNodeList allLessons = doc.SelectNodes("//lesson");
+                XmlNodeList allLessons = doc.SelectNodes("//tutorial");
 
                 if (allLessons != null)
                 {

@@ -1,9 +1,9 @@
 <!ELEMENT timesheet (day+)>
-<!ELEMENT day (lesson+)>
+<!ELEMENT day (tutorial+)>
 <!ATTLIST day name CDATA #REQUIRED>
 
-<!ELEMENT lesson EMPTY>
-<!ATTLIST lesson
+<!ELEMENT tutorial EMPTY>
+<!ATTLIST tutorial
     subject CDATA #REQUIRED
     room CDATA #REQUIRED
     teacher CDATA #REQUIRED
