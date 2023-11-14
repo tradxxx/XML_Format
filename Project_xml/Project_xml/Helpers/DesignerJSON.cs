@@ -20,7 +20,7 @@ namespace XML_Format.Service
         public void ScheduleForTheCurrentWeek()
         {      
 
-            Console.WriteLine("Расписание на текущую неделю:");
+            Console.WriteLine("Расписание:");
 
             foreach (var day in timesheetJson["timesheet"]["day"])
             {
@@ -46,7 +46,7 @@ namespace XML_Format.Service
 
         public void AllLessons()
         {
-            Console.WriteLine("Все занятия на этой неделе:");
+            Console.WriteLine("Все занятия:");
 
             int i = 1;
 
@@ -79,7 +79,7 @@ namespace XML_Format.Service
 
         public void AllPractice()
         {
-            Console.WriteLine("Практики на этой неделе:");
+            Console.WriteLine("Все практики:");
 
             foreach (var tutorial in timesheetJson.SelectTokens("$.timesheet.day[*].tutorial[?(@.type=='практика')]"))
             {
@@ -114,7 +114,7 @@ namespace XML_Format.Service
             Console.Write("Номер аудитории: ");
             string room = Console.ReadLine();
 
-            Console.WriteLine($"Преподаватели, проводящие практики в аудитории {room}:");
+            Console.WriteLine($"Преподаватели, проводящие практики в аудитории номер {room}:");
 
             var tutorials = timesheetJson.SelectTokens($"$.timesheet.day[*].tutorial[?(@.room == '{room}' && @.type == 'практика')]");
 
@@ -133,7 +133,7 @@ namespace XML_Format.Service
 
         public void LastLesson()
         {
-            Console.WriteLine("Последнее занятие для каждого дня недели:");
+            Console.WriteLine("Последние занятия:");
 
             foreach (JToken day in timesheetJson["timesheet"]["day"])
             {
@@ -149,7 +149,7 @@ namespace XML_Format.Service
         {
             int totalLessons = GetTotalLessons(timesheetJson);
 
-            Console.WriteLine($"Общее количество занятий за неделю: {totalLessons}");
+            Console.WriteLine($"Общее количество занятий: {totalLessons}");
 
             static int GetTotalLessons(JObject timesheet)
             {
