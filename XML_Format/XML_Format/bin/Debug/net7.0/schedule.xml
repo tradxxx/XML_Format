@@ -2,22 +2,22 @@
 <schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="schedule_schema.xsd">
   <day name="Понедельник">
-    <lesson subject="Практикум коучинг персонала" room="101" teacher="Антонова Н. В." start="11:10" end="12:30" type="лекция"/>
-    <lesson subject="Практикум коучинг персонала" room="102" teacher="Антонова Н. В." start="13:00" end="14:20" type="практика"/>
+    <lesson subject="Практикум коучинг персонала" room="302" teacher="Антонова Н. В." start="11:10" end="12:30" type="практика"/>
+    <lesson subject="Практикум коучинг персонала" room="302" teacher="Антонова Н. В." start="13:00" end="14:20" type="практика"/>
   </day>
   
   <day name="Вторник">
-    <lesson subject="Психология межличностных отношений" room="103" teacher="Сариева И.Р." start="11:10" end="12:30" type="лекция"/>
-    <lesson subject="Психология межличностных отношений" room="104" teacher="Сариева И.Р." start="13:00" end="14:20" type="практика"/>
+    <lesson subject="Психология межличностных отношений" room="209" teacher="Сариева И.Р." start="11:10" end="12:30" type="лекция"/>
+    <lesson subject="Психология межличностных отношений" room="209" teacher="Сариева И.Р." start="13:00" end="14:20" type="лекция"/>
   </day>
 
   <day name="Пятница">
-    <lesson subject="Технологии анализа данных в сети Интернет" room="105" teacher="Ланин В.В." start="07:40" end="09:00" type="лекция"/>
-    <lesson subject="Технологии анализа данных в сети Интернет" room="106" teacher="Ланин В.В." start="11:10" end="12:30" type="практика"/>
+    <lesson subject="Технологии анализа данных в сети Интернет" room="online" teacher="Ланин В.В." start="07:40" end="09:00" type="практика"/>
+    <lesson subject="Технологии анализа данных в сети Интернет" room="online" teacher="Ланин В.В." start="11:10" end="12:30" type="лекция"/>
   </day>
 
   <day name="Суббота">
-    <lesson subject="Анализ данных в HR" room="103" teacher="Титов А.С." start="09:30" end="10:50" type="лекция"/>
-    <lesson subject="Анализ данных в HR" room="104" teacher="Титов А.С." start="11:10" end="12:30" type="практика"/>
+    <lesson subject="Анализ данных в HR" room="308" teacher="Титов А.С." start="09:30" end="10:50" type="практика"/>
+    <lesson subject="Анализ данных в HR" room="308" teacher="Титов А.С." start="11:10" end="12:30" type="практика"/>
   </day>
 </schedule>
