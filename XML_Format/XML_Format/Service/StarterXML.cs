@@ -176,7 +176,7 @@ namespace XML_Format.Service
                     string start = lesson.Attributes["start"].Value;
                     string end = lesson.Attributes["end"].Value;
 
-                    Console.WriteLine($"{day}: {subject} ({teacher}) - {start} to {end}");
+                    Console.WriteLine($"{day}: {subject} ({teacher}) - с {start} до {end}");
                 }
             }
             else

@@ -4,123 +4,86 @@
       "@xsi:noNamespaceSchemaLocation": "schedule_schema.xsd",
       "day": [
         {
-          "@name": "Monday",
+          "@name": "Понедельник",
           "lesson": [
             {
-              "@subject": "Math",
+              "@subject": "Практикум коучинг персонала",
               "@room": "101",
-              "@teacher": "Mr. Smith",
-              "@start": "9:00",
-              "@end": "10:30",
-              "@type": "lecture"
+              "@teacher": "Антонова Н. В.",
+              "@start": "11:10",
+              "@end": "12:30",
+              "@type": "лекция"
             },
             {
-              "@subject": "English",
+              "@subject": "Практикум коучинг персонала",
               "@room": "102",
-              "@teacher": "Ms. Johnson",
+              "@teacher": "Антонова Н. В.",
               "@start": "11:00",
               "@end": "12:30",
-              "@type": "practice"
+              "@type": "практика"
             }
           ]
         },
         {
-          "@name": "Tuesday",
+          "@name": "Вторник",
           "lesson": [
             {
-              "@subject": "Physics",
+              "@subject": "Психология межличностных отношений",
               "@room": "103",
-              "@teacher": "Mr. Kepler",
-              "@start": "10:00",
-              "@end": "11:30",
-              "@type": "lecture"
-            },
-            {
-              "@subject": "Chemistry",
-              "@room": "104",
-              "@teacher": "Ms. Curie",
-              "@start": "12:00",
-              "@end": "13:30",
-              "@type": "practice"
-            },
-            {
-              "@subject": "Biology",
-              "@room": "105",
-              "@teacher": "Mr. Darwin",
-              "@start": "14:00",
-              "@end": "15:30",
-              "@type": "lecture"
-            }
-          ]
-        },
-        {
-          "@name": "Wednesday",
-          "lesson": [
-            {
-              "@subject": "Math",
-              "@room": "101",
-              "@teacher": "Mr. Smith",
-              "@start": "9:00",
-              "@end": "10:30",
-              "@type": "practice"
-            },
-            {
-              "@subject": "English",
-              "@room": "102",
-              "@teacher": "Ms. Johnson",
-              "@start": "11:00",
+              "@teacher": "Сариева И.Р.",
+              "@start": "11:10",
               "@end": "12:30",
-              "@type": "lecture"
+              "@type": "лекция"
             },
             {
-              "@subject": "Geometry",
-              "@room": "106",
-              "@teacher": "Mr. Euclid",
-              "@start": "14:00",
-              "@end": "15:30",
-              "@type": "lecture"
-            }
-          ]
-        },
-        {
-          "@name": "Thursday",
-          "lesson": [
-            {
-              "@subject": "Physics",
-              "@room": "103",
-              "@teacher": "Mr. Kepler",
-              "@start": "10:00",
-              "@end": "11:30",
-              "@type": "practice"
-            },
-            {
-              "@subject": "Chemistry",
+              "@subject": "Психология межличностных отношений",
               "@room": "104",
-              "@teacher": "Ms. Curie",
-              "@start": "12:00",
-              "@end": "13:30",
-              "@type": "lecture"
+              "@teacher": "Сариева И.Р.",
+              "@start": "13:00",
+              "@end": "14:20",
+              "@type": "практика"
             }
           ]
         },
         {
-          "@name": "Friday",
+          "@name": "Пятница",
           "lesson": [
             {
-              "@subject": "Biology",
+              "@subject": "Технологии анализа данных в сети Интернет",
               "@room": "105",
-              "@teacher": "Mr. Darwin",
-              "@start": "10:00",
-              "@end": "11:30",
-              "@type": "practice"
+              "@teacher": "Ланин В.В.",
+              "@start": "07:40",
+              "@end": "09:00",
+              "@type": "лекция"
             },
             {
-              "@subject": "Geometry",
+              "@subject": "Технологии анализа данных в сети Интернет",
               "@room": "106",
-              "@teacher": "Mr. Euclid",
-              "@start": "12:00",
-              "@end": "13:30",
-              "@type": "practice"
+              "@teacher": "Ланин В.В.",
+              "@start": "11:10",
+              "@end": "12:30",
+              "@type": "практика"
+            }
+          ]
+        },
+        {
+          "@name": "Суббота",
+          "lesson": [
+            {
+              "@subject": "Анализ данных в HR",
+              "@room": "103",
+              "@teacher": "Титов А.С.",
+              "@start": "09:30",
+              "@end": "10:50",
+              "@type": "лекция"
+            },
+            {
+              "@subject": "Анализ данных в HR",
+              "@room": "104",
+              "@teacher": "Титов А.С.",
+              "@start": "11:10",
+              "@end": "12:30",
+              "@type": "практика"
             }
           ]
         }
