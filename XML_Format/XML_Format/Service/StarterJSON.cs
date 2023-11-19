@@ -81,7 +81,7 @@ namespace XML_Format.Service
         {
             Console.WriteLine("Практики на этой неделе:");
 
-            foreach (var lesson in scheduleJson.SelectTokens("$.schedule.day[*].lesson[?(@.@type=='practice')]"))
+            foreach (var lesson in scheduleJson.SelectTokens("$.schedule.day[*].lesson[?(@.@type=='практика')]"))
             {
                 Console.WriteLine($"- {lesson["@subject"]}");
             }
@@ -94,7 +94,7 @@ namespace XML_Format.Service
 
             Console.WriteLine($"Лекции в аудитории {room}:");
 
-            var lectures = scheduleJson.SelectTokens($"$.schedule.day[*].lesson[?(@.@room == '{room}' && @.@type == 'lecture')]");
+            var lectures = scheduleJson.SelectTokens($"$.schedule.day[*].lesson[?(@.@room == '{room}' && @.@type == 'лекция')]");
 
             if (lectures.Any())
             {
@@ -116,7 +116,7 @@ namespace XML_Format.Service
 
             Console.WriteLine($"Преподаватели, проводящие практики в аудитории {room}:");
 
-            var lessons = scheduleJson.SelectTokens($"$.schedule.day[*].lesson[?(@.@room == '{room}' && @.@type == 'practice')]");
+            var lessons = scheduleJson.SelectTokens($"$.schedule.day[*].lesson[?(@.@room == '{room}' && @.@type == 'практика')]");
 
             if (lessons.Any())
             {

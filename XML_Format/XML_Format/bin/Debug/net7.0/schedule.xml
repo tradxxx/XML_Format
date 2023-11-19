@@ -1,30 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="schedule_schema.xsd">
-  <day name="Monday">
-    <lesson subject="Math" room="101" teacher="Mr. Smith" start="9:00" end="10:30" type="lecture"/>
-    <lesson subject="English" room="102" teacher="Ms. Johnson" start="11:00" end="12:30" type="practice"/>
+  <day name="Понедельник">
+    <lesson subject="Практикум коучинг персонала" room="101" teacher="Антонова Н. В." start="11:10" end="12:30" type="лекция"/>
+    <lesson subject="Практикум коучинг персонала" room="102" teacher="Антонова Н. В." start="13:00" end="14:20" type="практика"/>
   </day>
   
-  <day name="Tuesday">
-    <lesson subject="Physics" room="103" teacher="Mr. Kepler" start="10:00" end="11:30" type="lecture"/>
-    <lesson subject="Chemistry" room="104" teacher="Ms. Curie" start="12:00" end="13:30" type="practice"/>
-    <lesson subject="Biology" room="105" teacher="Mr. Darwin" start="14:00" end="15:30" type="lecture"/>
+  <day name="Вторник">
+    <lesson subject="Психология межличностных отношений" room="103" teacher="Сариева И.Р." start="11:10" end="12:30" type="лекция"/>
+    <lesson subject="Психология межличностных отношений" room="104" teacher="Сариева И.Р." start="13:00" end="14:20" type="практика"/>
   </day>
-  
-  <day name="Wednesday">
-    <lesson subject="Math" room="101" teacher="Mr. Smith" start="9:00" end="10:30" type="practice"/>
-    <lesson subject="English" room="102" teacher="Ms. Johnson" start="11:00" end="12:30" type="lecture"/>
-    <lesson subject="Geometry" room="106" teacher="Mr. Euclid" start="14:00" end="15:30" type="lecture"/>
+
+  <day name="Пятница">
+    <lesson subject="Технологии анализа данных в сети Интернет" room="105" teacher="Ланин В.В." start="07:40" end="09:00" type="лекция"/>
+    <lesson subject="Технологии анализа данных в сети Интернет" room="106" teacher="Ланин В.В." start="11:10" end="12:30" type="практика"/>
   </day>
-  
-  <day name="Thursday">
-    <lesson subject="Physics" room="103" teacher="Mr. Kepler" start="10:00" end="11:30" type="practice"/>
-    <lesson subject="Chemistry" room="104" teacher="Ms. Curie" start="12:00" end="13:30" type="lecture"/>
-  </day>
-  
-  <day name="Friday">
-    <lesson subject="Biology" room="105" teacher="Mr. Darwin" start="10:00" end="11:30" type="practice"/>
-    <lesson subject="Geometry" room="106" teacher="Mr. Euclid" start="12:00" end="13:30" type="practice"/>
+
+  <day name="Суббота">
+    <lesson subject="Анализ данных в HR" room="103" teacher="Титов А.С." start="09:30" end="10:50" type="лекция"/>
+    <lesson subject="Анализ данных в HR" room="104" teacher="Титов А.С." start="11:10" end="12:30" type="практика"/>
   </day>
 </schedule>

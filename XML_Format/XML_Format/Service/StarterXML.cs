@@ -95,7 +95,7 @@ namespace XML_Format.Service
             XmlDocument doc = new XmlDocument();
             doc.Load("schedule.xml");
 
-            XmlNodeList practices = doc.SelectNodes("//lesson[@type='practice']");
+            XmlNodeList practices = doc.SelectNodes("//lesson[@type='практика']");
 
             Console.WriteLine("Практики на этой неделе:");
 
@@ -113,7 +113,7 @@ namespace XML_Format.Service
             Console.Write("Номер аудитории: ");
             string room = Console.ReadLine();
 
-            XmlNodeList lectures = doc.SelectNodes("//lesson[@room='" + room + "' and @type='lecture']");
+            XmlNodeList lectures = doc.SelectNodes("//lesson[@room='" + room + "' and @type='лекция']");
 
             Console.WriteLine("Лекции в аудитории " + room+ ":");
 
@@ -139,7 +139,7 @@ namespace XML_Format.Service
             Console.Write("Номер аудитории: ");
             string room = Console.ReadLine();
 
-            XmlNodeList lessons = doc.SelectNodes($"//lesson[@room='{room}' and @type='practice']");
+            XmlNodeList lessons = doc.SelectNodes($"//lesson[@room='{room}' and @type='практика']");
 
             Console.WriteLine($"Преподаватели, проводящие практики в аудитории {room}:");
 
